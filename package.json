@@ -1,0 +1,36 @@
+{
+  "name": "textlensocr",
+  "version": "1.0.0",
+  "description": "an Optical Character Recognition app build from scratch using javascript and Node.js ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TunahanYelmer/TextLensOCR.git"
+  },
+  "keywords": [
+    "OCR",
+    "optical",
+    "character",
+    "recognition",
+    "image",
+    "processing",
+    "text",
+    "recognition",
+    "machine",
+    "learning",
+    "neural",
+    "networks"
+  ],
+  "author": "Tunahan Yelmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TunahanYelmer/TextLensOCR/issues"
+  },
+  "homepage": "https://github.com/TunahanYelmer/TextLensOCR#readme"
+}
