@@ -10,7 +10,7 @@ async function dataUrlToImage(dataUrl, outputPath,dataTime) {
   const buffer = await response.buffer();
   await sharp(buffer).toFile(outputPath);
   redis.set(dateTime, outputPath);
-  return outputPath, dataTime;
+  return outputPath
 }
 
 

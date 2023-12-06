@@ -2,14 +2,13 @@
 const sharp = require('sharp');
 
 
-async function removeNoise(inputPath, dateTime) {
-    const outputPath = `../data/images/processedImages/noiseRemovedImage/inputImage${dateTime}.png`;
+async function removeNoise(inputPath, filename) {
+    const outputPath = `./data/processedImages/noiseRemovedImage/${filename}`;
   await sharp(inputPath)
     .median()
     .toFile(outputPath);
-    
+    return outputPath;
 
-  
   console.log(`Noise removed and image saved at ${outputPath}`);
 }
 

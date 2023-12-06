@@ -1,16 +1,20 @@
-// binarization.js
 const sharp = require('sharp');
 
+async function binarizeImage(inputPath,filename) {
+  const outputPath = `./data/processedImages/binarizedImage/${filename}`;
 
+  try {
+    await sharp(inputPath)
+      .threshold()
+      .toFile(outputPath);
 
-async function binarizeImage(inputPath, dateTime) {
-  const  outputPath = `../data/images/binarizedImages/binarizedImage${dateTime}.png`;
-  await sharp(inputPath)
-    .threshold() // this will convert the image to black and white
-    .toFile(outputPath);
-    
-  console.log(`Binarized image saved at ${outputPath}`);
-  return outputPath;
+    console.log(`Binarized image saved at ${outputPath}`);
+    console.log(outputPath);
+    return outputPath;
+  } catch (error) {
+    console.error('Error in binarizeImage:', error.message);
+    throw error;
+  }
 }
 
 module.exports = binarizeImage;

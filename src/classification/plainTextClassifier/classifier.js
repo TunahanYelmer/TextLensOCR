@@ -3,7 +3,7 @@ const canvas = require('canvas');
 const { Image, createCanvas } = canvas;
 const model = require('./neuralNetwork/model');
 
-async function predict(images) {
+async function predictPlainText(images) {
   // Initialize an array to hold the predictions
   const predictions = [];
 
@@ -44,4 +44,4 @@ async function predict(images) {
   return predictions;
 }
 
-module.exports = predict;
+module.exports = predictPlainText;
